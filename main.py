@@ -25,7 +25,6 @@ if __name__ == '__main__':
              url_code="https://zlapp.fudan.edu.cn/fudanelec/wap/default/info")
     dorm_electricity.login()
     remaining_electricity = dorm_electricity.get_dorm_electricity()
-    dorm_electricity.close(1)
-
     p = wechat.push(title='每日打卡与宿舍电量汇报', message='今日打卡成功，宿舍剩余电量：'+ remaining_electricity + '\n打卡位置：' + geo)
+    dorm_electricity.close()
     sys.exit(p)
