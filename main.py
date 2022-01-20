@@ -22,7 +22,7 @@ if __name__ == '__main__':
     #daily_fudan.check()
     geo = daily_fudan.geo_info
     last_info = daily_fudan.last_info
-    daily_fudan.close(1)
+    #daily_fudan.close(1)
 
     dorm_electricity = Elec(uid=uid, psw=psw, url_login='https://uis.fudan.edu.cn/authserver/login',
              url_code="https://zlapp.fudan.edu.cn/fudanelec/wap/default/info")
