@@ -54,7 +54,6 @@ class Zlapp(login.Fudan):
         print("◉今日日期为:", today)
         if last_info["d"]["info"]["date"] == today:
             print("\n*******今日已提交*******")
-            self.logout()
             return False
         else:
             print("\n\n*******未提交*******")
