@@ -13,7 +13,7 @@ Thank you.
 
 * Automatically summit PAFD everyday at 1 a.m. (GMT+8)
 
-* send wechat messages to notify the success of PAFD summit 
+* send wechat messages to notify the success of PAFD summit (pushkey needed)
 
 * along with remaining dorm electricity within the message
 
