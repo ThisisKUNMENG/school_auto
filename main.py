@@ -16,10 +16,8 @@ if __name__ == '__main__':
     daily_fudan = Zlapp(uid, psw,
                         url_login=zlapp_login, url_code=code_url)
     daily_fudan.login()
-    daily_fudan.check()
-    daily_fudan.checkin()
-    # 再检查一遍
-    daily_fudan.check()
+    while (daily_fudan.check()):
+        daily_fudan.checkin()
     geo = daily_fudan.geo_info
     last_info = daily_fudan.last_info
     daily_fudan.close(1)
