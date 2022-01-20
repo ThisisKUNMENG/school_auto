@@ -1,0 +1,28 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Auto
+
+
+on:
+  schedule:
+    - cron: '00 17 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout codes
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Prepare environment
+        run: |
+          pip install opencv-python==4.5.4.60
+          pip install beautifulsoup4 lxml requests easyocr pillow numpy json
+      - name: run
+        run: STD_ID=${{ secrets.STD_ID }} PASSWORD=${{ secrets.PASSWORD }} pushkey_SCU=${{ secrets.pushkey_SCU }} pushkey_SCT=${{ secrets.pushkey_SCT }}python3 main.py
