@@ -126,16 +126,16 @@ class Fudan:
         else:
             print("◉登出异常")
 
-    def close(self, exit_code=0):
+    def close(self):
         """
         执行登出并关闭会话
         """
 
         self.logout()
-        #self.session.close()
+        self.session.close()
         print("◉关闭会话")
         print("************************")
-        sys_exit(exit_code)
+        #sys_exit(exit_code)
 
 def get_account():
     """
