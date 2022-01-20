@@ -23,6 +23,6 @@ jobs:
       - name: Prepare environment
         run: |
           pip install opencv-python==4.5.4.60
-          pip install beautifulsoup4 lxml requests easyocr pillow numpy json
+          pip install beautifulsoup4 lxml requests easyocr pillow numpy
       - name: run
         run: STD_ID=${{ secrets.STD_ID }} PASSWORD=${{ secrets.PASSWORD }} pushkey_SCU=${{ secrets.pushkey_SCU }} pushkey_SCT=${{ secrets.pushkey_SCT }} python3 main.py
