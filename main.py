@@ -28,4 +28,4 @@ if __name__ == '__main__':
     remaining_electricity = dorm_electricity.get_dorm_electricity()
     p = wechat.push(title='每日打卡与宿舍电量汇报', message='今日打卡成功，宿舍剩余电量：'+ remaining_electricity + '\n打卡位置：' + geo)
     dorm_electricity.close()
-    sys.exit(!p)
+    sys.exit(p-1)

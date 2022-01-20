@@ -1,3 +1,5 @@
+#a script to get dorm remaining electricity
+
 import requests
 import json
 #from bs4 import BeautifulSoup
