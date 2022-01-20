@@ -17,7 +17,7 @@ Thank you.
 
 * along with remaining dorm electricity within the message
 
-
+* numerous BUGS that are beyond my ability to fix
 
 ---
 
