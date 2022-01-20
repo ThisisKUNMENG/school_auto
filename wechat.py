@@ -1,9 +1,10 @@
 #a script to send message to wechat
 
 import requests
+import os
 
-pushkey_SCU = getenv("pushkey_SCU")
-pushkey_SCT = getenv("pushkey_SCT")
+pushkey_SCU = os.getenv("pushkey_SCU")
+pushkey_SCT = os.getenv("pushkey_SCT")
 pushurl_SCU = f"https://sc.ftqq.com/{pushkey_SCU}.send"
 pushurl_SCT = f"https://sctapi.ftqq.com/{pushkey_SCT}.send"
 
