@@ -12,10 +12,10 @@ if pushkey_SCU == None and pushkey_SCT == None:
         print("读取账号中……")
         with open("pushkey.txt", "r") as old:
             raw = old.readlines()
-        if (raw[0][:3] == "SCU") or (len(raw[0]) < 10):
+        if (raw[0][:3] != "SCU"):
             print("pushkey.txt 内容无效, 请手动修改内容")
         pushkey_SCU = (raw[0].split(":"))[1].strip()
-        pushurl_SCT = (raw[1].split(":"))[1].strip()
+        pushkey_SCT = (raw[1].split(":"))[1].strip()
     else:
         print("未找到pushkey.txt, 判断缺少pushkey")
         Push = False
@@ -40,5 +40,4 @@ def push(title, message):
     else:
         print(f"发送通知失败：{response.status_code}")
         return False
-
 

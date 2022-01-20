@@ -19,13 +19,12 @@ if __name__ == '__main__':
     while (daily_fudan.check()):
         daily_fudan.checkin()
     geo = daily_fudan.geo_info
-    last_info = daily_fudan.last_info
     daily_fudan.close()
-
     dorm_electricity = Elec(uid=uid, psw=psw, url_login='https://uis.fudan.edu.cn/authserver/login',
              url_code="https://zlapp.fudan.edu.cn/fudanelec/wap/default/info")
     dorm_electricity.login()
     remaining_electricity = dorm_electricity.get_dorm_electricity()
-    p = wechat.push(title='每日打卡与宿舍电量汇报', message='今日打卡成功，宿舍剩余电量：'+ remaining_electricity + '\n打卡位置：' + geo)
+    p = wechat.push(title='每日打卡与宿舍电量汇报', message='今日打卡成功，宿舍剩余电量：'+ remaining_electricity + '\n\n打卡位置：' + geo)
     dorm_electricity.close()
     sys.exit(p-1)
+

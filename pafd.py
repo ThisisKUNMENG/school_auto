@@ -42,9 +42,9 @@ class Zlapp(login.Fudan):
 
         position = last_info["d"]["info"]['geo_api_info']
         position = json_loads(position)
-        geo_info = position['formattedAddress']
+        self.geo_info = position['formattedAddress']
 
-        print("◉上一次提交地址为:", geo_info)
+        print("◉上一次提交地址为:", self.geo_info)
         # print("◉上一次提交GPS为", position["position"])
         # print(last_info)
 
@@ -132,6 +132,7 @@ class Zlapp(login.Fudan):
             time.sleep(0.1)
             if (json_loads(save.text)["e"] != 1):
                 break
+
 
 if __name__ == '__main__':
     uid, psw = get_account()
