@@ -17,12 +17,12 @@ if __name__ == '__main__':
                         url_login=zlapp_login, url_code=code_url)
     daily_fudan.login()
     daily_fudan.check()
-    #daily_fudan.checkin()
+    daily_fudan.checkin()
     # 再检查一遍
-    #daily_fudan.check()
+    daily_fudan.check()
     geo = daily_fudan.geo_info
     last_info = daily_fudan.last_info
-    #daily_fudan.close(1)
+    daily_fudan.close(1)
 
     dorm_electricity = Elec(uid=uid, psw=psw, url_login='https://uis.fudan.edu.cn/authserver/login',
              url_code="https://zlapp.fudan.edu.cn/fudanelec/wap/default/info")
