@@ -18,6 +18,7 @@ from PIL import Image
 from PIL import ImageEnhance
 import requests
 from requests import session, post, adapters
+import platform
 
 import login
 import wechat
@@ -49,7 +50,8 @@ class Zlapp(login.Fudan):
 
         # 改为上海时区
         os.environ['TZ'] = 'Asia/Shanghai'
-        #time.tzset()
+        if platform.system() != "Windows":
+            time.tzset()
         today = time.strftime("%Y%m%d", time.localtime())
         print("◉今日日期为:", today)
         if last_info["d"]["info"]["date"] == today:
