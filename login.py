@@ -132,7 +132,7 @@ class Fudan:
         """
 
         self.logout()
-        self.session.close()
+        #self.session.close()
         print("◉关闭会话")
         print("************************")
         sys_exit(exit_code)
