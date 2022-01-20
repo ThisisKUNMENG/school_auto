@@ -2,8 +2,8 @@
 
 import requests
 
-pushkey_SCU = "SCU176210T38ce782eeb7c584032783542e6eec4ac60b5e0b254ad9"
-pushkey_SCT = "SCT59286TuS2ZzTEZPOTv1JIE97Yp2Ylj"
+pushkey_SCU = getenv("pushkey_SCU")
+pushkey_SCT = getenv("pushkey_SCT")
 pushurl_SCU = f"https://sc.ftqq.com/{pushkey_SCU}.send"
 pushurl_SCT = f"https://sctapi.ftqq.com/{pushkey_SCT}.send"
 
