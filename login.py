@@ -63,7 +63,7 @@ class Fudan:
             return page_login.text
         else:
             print("◉Fail to open Login Page, Check your Internet connection\n")
-            self.close()
+            self.fail(page_login.status_code)
 
 
     def login(self):
@@ -136,6 +136,9 @@ class Fudan:
         print("◉关闭会话")
         print("************************")
         #sys_exit(exit_code)
+
+    def fail(self, exit_code):
+        sys_exit(exit_code)
 
 def get_account():
     """
