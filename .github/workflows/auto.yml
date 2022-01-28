@@ -6,7 +6,7 @@ name: Auto
 
 on:
   schedule:
-    - cron: '00 17 * * *'
+    - cron: '00 01 * * *'
   workflow_dispatch:
 
 jobs:
