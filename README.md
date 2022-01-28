@@ -11,13 +11,18 @@ Thank you.
 
 ## Features:
 
-* Automatically summit PAFD everyday at 1 a.m. (GMT+8)
+* Automatically summit PAFD everyday at 01:00 UTC, that is 9 a.m. GMT+8. _There might be delays due to github server._
 
 * send wechat messages to notify the success of PAFD summit (pushkey needed)
 
 * along with remaining dorm electricity within the message
 
 * numerous BUGS that are beyond my ability to fix
+
+    * `Network is unreachable` in action, causing complete failure
+    * UIS might not be connected, causing complete failure _(to be fixed)_
+    * dorm electricity API by Fudan might be down _(fixed)_
+    * and so on......
 
 ---
 
